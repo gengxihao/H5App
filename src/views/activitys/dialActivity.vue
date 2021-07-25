@@ -18,12 +18,13 @@
                 </div>
             </div>
             <div class="hint_box">您还有{{prizeInfo.count}}次抽奖机会</div>
+
             <div class="prize_box" v-if="prizeStatus">
                 <img src="../../assets/dialActivity/guanbi@2x.png" alt="" @click="prizeStatus = !prizeStatus">
                 <div class="prize">
                     <h1>{{prizeInfo.id ? '恭喜抽中' : '谢谢参与'}}</h1>
                     <h2>{{prizeInfo.id ? prizeInfo.grade : '您还有' + `${prizeInfo.count}` + '次'}}</h2>
-                    <h3>{{prizeInfo.id ? prizeInfo.name : '抽奖机会'}}</h3>
+                    <!-- <h3>{{prizeInfo.id ? prizeInfo.name : '抽奖机会'}}</h3> -->
                 </div>
                 <div class="btn_box" v-if="prizeInfo.count" @click="prizeStatus = !prizeStatus">再来一次</div>
             </div>
@@ -225,29 +226,29 @@
     .wheel_wrapper {
         left: 50%;
         top: 140px;
-        margin-left: -120px;
-        width: 260px;
-        height: 260px;
+        margin-left: -150px;
+        width: 310px;
+        height: 310px;
         position: absolute;
         background: url("../../assets/dialActivity/circleb@2x.png");
         background-size: 100% 100%;
     }
 
     .wheel-pointer {
-        width: 46px;
-        height: 40px;
+        width: 98px;
+        height: 72px;
         position: absolute;
-        top: 88px;
+        top: 70px;
         left: 50%;
         text-align: center;
         background: url("../../assets/dialActivity/pointer@2x.png");
         background-size: 100% 100%;
-        font-size: 12px;
+        font-size: 18px;
         font-weight: bold;
         color: rgba(250, 68, 69, 1);
-        line-height: 12px;
-        padding-top: 20px;
-        margin-left: -20px;
+        line-height: 22px;
+        padding-top: 46px;
+        margin-left: -48px;
         z-index: 99;
     }
 
@@ -286,13 +287,14 @@
     .prize-item {
         width: 100%;
         height: 100%;
-        line-height: 2.6rem;
+        line-height: 122px;
         transform-origin: bottom;
     }
 
     .prize-name {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
+        text-align: center;
         color: rgba(255, 48, 45, 1);
     }
 
@@ -307,19 +309,19 @@
     }
 
     .hint_box {
-        width: 140px;
-        height: 16px;
+        width: 276px;
+        height: 36px;
         background: url("../../assets/dialActivity/chancea@2x.png");
         background-size: 100% 100%;
         position: absolute;
-        top: 460px;
+        top: 458px;
         left: 50%;
         text-align: center;
         transform: translateX(-50%);
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 600;
         color: rgba(220, 50, 67, 1);
-        line-height: 14px;
+        line-height: 30px;
     }
 
     .explain_box {
@@ -360,39 +362,37 @@
         color: rgba(220,50,67,1);
     }
     .prize_box img {
-        width: .48rem;
-        height: .48rem;
-        margin: 2.57rem 1.1rem .19rem 6.42rem;
+        width: 22.5px;
+        height: 22.5px;
+        margin: 120px 52px 9px 300px;
     }
     .prize {
-        width: 5.8rem;
-        height: 5.4rem;
+        width: 272px;
+        height: 152px;
         background: url("../../assets/dialActivity/packet@2x.png");
         background-size: 100% 100%;
         margin: 0 auto;
-        padding: 1.56rem 0 .6rem;
+        text-align: center;
+        padding: 73px 0 52px;
     }
     .prize h1 {
-        font-size: .3rem;
-        margin-bottom: .1rem;
+        font-size: 14px;
+        margin-bottom: 5px;
     }
     .prize h2, .prize h3{
-        font-size: .36rem;
+        font-size: 16px;
         font-weight: bold;
-        line-height: .48rem;
-    }
-    .prize p{
-        font-size: .24rem;
-        color: #fff;
-        margin-top: 1.56rem;
+        line-height: 22px;
     }
     .btn_box {
-        width: 4rem;
-        height: .75rem;
-        font-size: .28rem;
+        width: 188px;
+        height: 26px;
+        font-size: 14px;
+        text-align: center;
         font-weight: bold;
-        padding-top: .2rem;
+        padding: 6px 0;
         margin: 0 auto;
+        line-height: 26px;
         background: url("../../assets/dialActivity/btn@2x.png");
         background-size: 100% 100%;
     }

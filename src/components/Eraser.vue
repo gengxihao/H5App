@@ -283,13 +283,13 @@ export default {
 .vue-eraser {
   position: relative;
   width: 100%;
-  height: 2.16rem;
+  height: 101px;
   user-select: none;
   .img-wraper {
     width: 100%;
-    height: 2.16rem;
+    height: 101px;
     text-align: center;
-    line-height: 2.16rem
+    line-height: 101px;
   }
   .cover-img {
     position: absolute;
@@ -304,8 +304,8 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
-    width: 3.97rem;
-    height: 2.16rem;
+    width: 186px;
+    height: 101px;
     z-index: 3;
   }
 }

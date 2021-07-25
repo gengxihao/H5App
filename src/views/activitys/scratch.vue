@@ -57,12 +57,10 @@ export default {
           alert("您的次数已用完！")
           return false
         }
-      if(ratio>0.009){
+      if(ratio > 0.009){
         let flag = this.flag
         if(flag){
-           this.flag = false
-           
-           console.log('过程');
+          this.flag = false
           this.axios.post('/mer/marketing/activy/raffle',{order_no:this.order})
           .then(res=>{
             console.log("中奖",res)
@@ -76,7 +74,7 @@ export default {
           })
           .catch(rej=>{
             console.log("失败",rej)
-             Toast("网络异常");
+            Toast("网络异常");
           })
 
         }
@@ -127,11 +125,11 @@ export default {
   height: $height;
   background-color: $bgc;
   color: $color;
-  font-size: .28rem;
+  font-size: 13px;
   text-align: center;
   line-height: $height;
   border: none;
-  margin-top: 4.50rem;
+  margin-top: 211px;
   touch-action: manipulation;
   font-weight: 400;
   cursor: pointer;
@@ -142,14 +140,17 @@ export default {
 #scratch{
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url('../../assets/scratch/s_bg.png');
   background-size: cover;
   background-position: center;
   color:#DC3243
 }
 .wraper{
-  width: 5.55rem;
-  height: 5.87rem;
+  width: 260px;
+  height: 275px;
   background-image: url('../../assets/scratch/s_box.png');
   background-size: cover;
   background-position: center;
@@ -160,25 +161,18 @@ export default {
   overflow: hidden;
 }
 .inner{
-  width: 3.97rem;
-  height: 2.16rem;
-  margin: 1.95rem auto 0;
-  font-size: .30rem;
+  width: 186px;
+  height: 101px;
+  margin: 91px auto 0;
+  font-size: 14px;
 }
 .inner_tip{
   text-align: center;
-  font-size: .36rem;
-  margin-top: .80rem
+  font-size: 16px;
+  margin-top: 37px; 
 }
-// .btn:nth-of-type(1){
-//   margin-top: 10px;
-//   @include btn(100px, 40px, #2d8cf0, #fff);
-// }
-// .btn:nth-of-type(2){
-//   margin-top: 10px;
-//   @include btn(100px, 40px, #19be6b, #fff);
-// }
+
 .btn:nth-of-type(1){
-  @include btn(4.00rem,.75rem, #FBE34E, #DC3243)
+  @include btn(188px, 35px, #FBE34E, #DC3243)
 }
 </style>
