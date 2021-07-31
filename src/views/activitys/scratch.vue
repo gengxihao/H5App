@@ -60,22 +60,27 @@ export default {
       if(ratio > 0.009){
         let flag = this.flag
         if(flag){
-          this.flag = false
-          this.axios.post('/mer/marketing/activy/raffle',{order_no:this.order})
-          .then(res=>{
-            console.log("中奖",res)
-            if(res.data.code === this.$webConfig.httpSuccessStatus){
-              // this.num = res.data.data.count
-              let id = res.data.data.id  //id为0，没中奖，大于0，中奖
-              id == 0? this.resText ="谢谢惠顾" : this.resText = res.data.data.name
-            }else {
-              Toast(res.data.message);
-            }
-          })
-          .catch(rej=>{
-            console.log("失败",rej)
-            Toast("网络异常");
-          })
+          this.flag = false;
+          let id = 0;
+          if (this.num === 8) {
+            id = 1;
+          }
+          id == 0 ? this.resText ="谢谢惠顾" : this.resText = '10积分';
+          // this.axios.post('/mer/marketing/activy/raffle',{order_no:this.order})
+          // .then(res=>{
+          //   console.log("中奖",res)
+          //   if(res.data.code === this.$webConfig.httpSuccessStatus){
+          //     // this.num = res.data.data.count
+          //     let id = res.data.data.id  //id为0，没中奖，大于0，中奖
+          //     id == 0? this.resText ="谢谢惠顾" : this.resText = res.data.data.name
+          //   }else {
+          //     Toast(res.data.message);
+          //   }
+          // })
+          // .catch(rej=>{
+          //   console.log("失败",rej)
+          //   Toast("网络异常");
+          // })
 
         }
       }
@@ -98,20 +103,19 @@ export default {
   created(){
     this.order = this.$route.query.order
     //获取次数
-    this.axios.post('/mer/marketing/activy/selectListMarketingActivyInfo',{order_no:this.order})
-    .then(res=>{
-      console.log("获取次数",res)
-      if(res.data.code === this.$webConfig.httpSuccessStatus){
-        this.num = res.data.data.count
-      }else {
-        Toast(res.data.message);
-        }
-    })
-    .catch(rej=>{
-      console.log("获取失败",rej)
-       Toast("网络异常");
-    })
- 
+    // this.axios.post('/mer/marketing/activy/selectListMarketingActivyInfo',{order_no:this.order})
+    // .then(res=>{
+    //   console.log("获取次数",res)
+    //   if(res.data.code === this.$webConfig.httpSuccessStatus){
+    //     this.num = res.data.data.count
+    //   }else {
+    //     Toast(res.data.message);
+    //     }
+    // })
+    // .catch(rej=>{
+    //   console.log("获取失败",rej)
+    //    Toast("网络异常");
+    // })
   },
 
   

@@ -32,21 +32,21 @@ export default {
             name: 'Recommend'
           },
           icon: 'user-o'
-        },
-        { 
-          title: '商城',
-          to: {
-            name: 'ShoppingMall'
-          },
-          icon: 'user-o'
-        },
-        {
-          title: '我的',
-          to: {
-            name: 'My'
-          },
-          icon: 'user-o'
         }
+        // { 
+        //   title: '商城',
+        //   to: {
+        //     name: 'ShoppingMall'
+        //   },
+        //   icon: 'user-o'
+        // },
+        // {
+        //   title: '我的',
+        //   to: {
+        //     name: 'My'
+        //   },
+        //   icon: 'user-o'
+        // }
       ]
     }
   },
